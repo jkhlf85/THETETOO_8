@@ -12,14 +12,14 @@ local function history(extra, suc, result)
     delete_msg(result[i].id, ok_cb, false)
   end
   if tonumber(extra.con) == #result then
-    send_msg(extra.chatid,  " ..#result.. "🎀🎖مــن الــرسـ📩ــائل تــم تنــ🐥ــظيفـها , ok_cb, false)
+    send_msg(extra.chatid, '"'..#result..'" من الرسائل تم تنظيفها 🍃', ok_cb, false)
   else
-send_msg(extra.chatid,  🎀🎖 تــم تــنــظيـف الـكروب🔔✔️ ســورس تيــتـو تابع للقنـاة @no_no2🍃 , ok_cb, false)
+send_msg(extra.chatid, 'تم ☑️ تـنـظـيـف الـمـجـمـوعـه 🛡👍🏿 🍃', ok_cb, false)
 end
 end
-local function run(msg, matches)
-  if matches[1] ==  تنظيف  and is_sudo(msg) then
-    if msg.to.type ==  channel  then
+local function ali(msg, matches)
+  if matches[1] == 'حذف' and is_sudo(msg) then
+    if msg.to.type == 'channel' then
     if tonumber(matches[2]) > 100000 or tonumber(matches[2]) < 1 then
         return "يمكنك وضع عدد100000 رسالة او اقل فقط"
       end
@@ -28,14 +28,13 @@ local function run(msg, matches)
       return ""
     end
   else
-    return "🎀🎖للمـــشـرفيـن فقـط 🏅 انتـةة دايح مو مشـرف 💃️ تابع قناة سورس  @no_no2 ☺️"
+    return "🙈 لا تـلعـب بـكـيـفـك    ✋☝🏿️"
   end
 end
 
 return {
     patterns = {
-         ^(تنظيف) (%d*)$ 
+        '^(حذف) (%d*)$'
     },
-    run = run,
+    run = ali
 }
-
