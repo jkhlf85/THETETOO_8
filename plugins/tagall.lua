@@ -8,7 +8,7 @@
 ▀▄▀▀▄▄▀▀▄▄▀▄▄▀▀▄▄▀▀▄▄▀▄▄▀▀▄▄▀▀▄▄▀▄▄▀▀▄▄▀▀▄▄▀▄▄▀▀ 
 --]]
 
-pr9local function tagall(cb_extra, success, result) 
+local function tagall(cb_extra, success, result) 
     local receiver = cb_extra.receiver 
     local text = '' 
 local msgss = 0 
